@@ -1,6 +1,14 @@
 @extends('layout')
 @section('content')
 
+<style>
+  .fa-trash{
+    color: blue;
+  }
+  .fa-edit{
+    color: blue;
+  }
+</style>
 <table class="table table-striped table-hover table-sm table-dark">
   <thead>
     <tr>
@@ -18,8 +26,8 @@
       <td class="bg-primary">{{ $item->job_title }}</td>
       <td class="bg-danger">{{ $item->min_salary }}</td>
       <td class="bg-success" >{{ $item->max_salary }}</td>
-      <td class="bg-warning"><a href="delete/{{ $item->job_id }}"><i class="fas fa-trash"></i></a>
-        <a href="edit/{{ $item->job_id }}"><i class="fas fa-edit"></i></a>
+      <td class="bg-warning"><a href="delete/{{ $item->job_id }}"><i class="fas fa-trash" title="Delete"></i></a>
+        <a href="edit/{{ $item->job_id }}"><i class="fas fa-edit" title="Edit"></i></a>
       </td>
 
     </tr>
